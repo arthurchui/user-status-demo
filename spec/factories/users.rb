@@ -8,5 +8,10 @@ FactoryGirl.define do
     password_confirmation 'please'
     # required if the Devise Confirmable module is used
     # confirmed_at Time.now
+
+    factory :seed_user do
+      name { Faker::Name.name }
+      sequence(:email) {|n| "user#{n}@example.com" }
+    end
   end
 end

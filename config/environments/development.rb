@@ -51,4 +51,8 @@ UserStatus::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Enable threaded mode
+  config.threadsafe! unless ENV['THREADSAFE'] == 'off'
+
 end
