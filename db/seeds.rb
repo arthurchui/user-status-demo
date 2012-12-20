@@ -23,7 +23,7 @@ user.add_role :admin
 
 def random_status
   i = rand(@default_statuses.size)
-  @default_statuses[0][1]
+  @default_statuses[i][1]
 end
 
 10.times do

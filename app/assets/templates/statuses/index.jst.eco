@@ -1,0 +1,7 @@
+<h3>Marketing Department</h3>
+
+<ul id="statuses">
+  <% for status in @statuses.models: %>
+    <li><%= status.get('message') %></li>
+  <% end %>
+</ul>

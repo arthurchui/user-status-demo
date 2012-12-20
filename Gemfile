@@ -21,6 +21,9 @@ gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
 
 gem "foreigner"
 
+gem 'inherited_resources'
+gem 'backbone-on-rails'
+
 group :development, :test do
   gem 'guard', '>= 0.6.2'
   gem 'guard-bundler', '>= 0.1.3'
