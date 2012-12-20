@@ -19,8 +19,18 @@ user = User.find_or_create_by_email :name => ENV['ADMIN_NAME'].dup, :email => EN
 puts 'user: ' << user.name
 user.add_role :admin
 
+@default_statuses = YAML.load(File.read(File.expand_path('config/locales/statuses.en.yml')))['en']['statuses'].to_a
+
+def random_status
+  i = rand(@default_statuses.size)
+  @default_statuses[0][1]
+end
+
 10.times do
   ActiveRecord::Base.transaction do
     user = FactoryGirl.create(:seed_user)
+    status = Status.new(random_status)
+    status.user = user
+    status.save!
   end
 end

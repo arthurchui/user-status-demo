@@ -1,0 +1,15 @@
+en:
+  statuses:
+    home: 
+      message: "I'm home"
+      active: false
+    office: 
+      message: "I'm at office"
+      active: true
+    lunch: 
+      message: "I'm out for lunch" 
+      active: true
+    nap: 
+      message: "I'm taking a nap"
+      active: true
+
