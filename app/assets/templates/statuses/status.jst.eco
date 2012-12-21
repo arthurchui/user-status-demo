@@ -1,0 +1,9 @@
+  <td>
+    <%= @status.get('user').name %>
+  </td>
+  <td>
+    <%= @status.get('message') %>
+  </td>
+  <td>
+    <%= $.timeago(@status.get('updated_at')) %>
+  </td>

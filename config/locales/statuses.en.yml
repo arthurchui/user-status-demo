@@ -8,8 +8,8 @@ en:
       active: true
     lunch: 
       message: "I'm out for lunch" 
-      active: true
+      active: false
     nap: 
-      message: "I'm taking a nap"
+      message: "I'm meeting clients"
       active: true
 

@@ -1,7 +1,21 @@
 <h3>Marketing Department</h3>
 
-<ul id="statuses">
-  <% for status in @statuses.models: %>
-    <li><%= status.get('message') %></li>
-  <% end %>
-</ul>
+<form id="new_status" class="form-inline">
+  <fieldset>
+     <input type="text" id="status_message" name="status[message]" placeholder="What are you doing?">
+     <label class="checkbox">
+       <input type="checkbox" id="status_active" name="status[active]"> I'm working
+     </label>
+     <button type="submit" class="btn">Update</button>
+  </fieldset>
+</form>
+
+<table id="statuses" class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Message</th>
+      <th>Last Updated</th>
+    </tr>
+  </thead>
+</table>
