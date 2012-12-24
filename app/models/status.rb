@@ -8,4 +8,9 @@ class Status < ActiveRecord::Base
   validates_uniqueness_of :user_id
 
   default_scope order("updated_at desc")
+
+  def as_json(options={})
+    options.merge!(include: :user)
+    super
+  end
 end

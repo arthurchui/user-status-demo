@@ -26,6 +26,10 @@ def random_status
   @default_statuses[i][1]
 end
 
+status = Status.new(random_status)
+status.user = user
+status.save!
+
 10.times do
   ActiveRecord::Base.transaction do
     user = FactoryGirl.create(:seed_user)

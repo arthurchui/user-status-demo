@@ -4,7 +4,7 @@ class StatusesController < InheritedResources::Base
 
   def index
     super do |format|
-      format.json { render json: collection.to_json(include: :user) }
+      format.json { render json: collection.to_json }
     end
   end
 
@@ -17,6 +17,7 @@ class StatusesController < InheritedResources::Base
       @status.user = current_user
       create!
     end
+    WebsocketRails[:statuses].trigger 'sync', current_user.status
   end
 
   protected

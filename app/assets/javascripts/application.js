@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.effects.highlight
 //= require bootstrap
 //= require underscore
 //= require backbone
@@ -23,3 +24,5 @@
 //= require_tree ./routers
 //= require_tree ./plugins
 //= require_tree .
+//= require websocket_rails/main
+

@@ -7,6 +7,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem "thin", ">= 1.5.0", :group => :production
 gem "bootstrap-sass", ">= 2.1.1.0"
 gem "devise", ">= 2.1.2"
@@ -23,6 +24,7 @@ gem "foreigner"
 
 gem 'inherited_resources'
 gem 'backbone-on-rails'
+gem 'websocket-rails'
 
 group :development, :test do
   gem 'guard', '>= 0.6.2'
