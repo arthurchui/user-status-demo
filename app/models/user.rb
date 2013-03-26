@@ -12,4 +12,11 @@ class User < ActiveRecord::Base
 
   has_one :status
 
+  after_create :create_status
+
+  def create_status
+    self.status = Status.new(message: "I just joined.")
+    self.status.save!
+  end
+
 end
